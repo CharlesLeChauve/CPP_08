@@ -18,38 +18,38 @@ int	main(void)
 		deque.push_back(values[i]);
 	}
 	try {
-		int i = easyfind<std::vector<int> >(vect, 97);
-		std::cout << i << " found in container vector" << std::endl;
+		std::vector<int>::iterator it = easyfind<std::vector<int> >(vect, 97);
+		std::cout << *it << " found in container vector" << std::endl;
 	} catch (std::exception& e) {
 		std::cout << e.what() << std::endl;
 	}
 	try {
-		int i = easyfind<std::list<int> >(list, 97);
-		std::cout << i << " found in container list" << std::endl;
+		std::list<int>::iterator it = easyfind<std::list<int> >(list, 97);
+		std::cout << *it << " found in container list" << std::endl;
 	} catch (std::exception& e) {
 		std::cout << e.what() << std::endl;
 	}
 	try {
-		int i = easyfind<std::deque<int> >(deque, 97);
-		std::cout << i << " found in container deque" << std::endl;
+		std::deque<int>::iterator it = easyfind<std::deque<int> >(deque, 97);
+		std::cout << *it << " found in container deque" << std::endl;
 	} catch (std::exception& e) {
 		std::cout << e.what() << std::endl;
 	}
 	try {
-		int i = easyfind<std::vector<int> >(vect, 51);
-		std::cout << i << " found in container vector" << std::endl;
+		std::vector<int>::iterator it = easyfind<std::vector<int> >(vect, 51);
+		std::cout << *it << " found in container vector" << std::endl;
 	} catch (std::exception& e) {
 		std::cout << e.what() << std::endl;
 	}
 	try {
-		int i = easyfind<std::list<int> >(list, 51);
-		std::cout << i << " found in container list" << std::endl;
+		std::list<int>::iterator it = easyfind<std::list<int> >(list, 51);
+		std::cout << *it << " found in container list" << std::endl;
 	} catch (std::exception& e) {
 		std::cout << e.what() << std::endl;
 	}
 	try {
-		int i = easyfind<std::deque<int> >(deque, 51);
-		std::cout << i << " found in container deque" << std::endl;
+		std::deque<int>::iterator it = easyfind<std::deque<int> >(deque, 51);
+		std::cout << *it << " found in container deque" << std::endl;
 	} catch (std::exception& e) {
 		std::cout << e.what() << std::endl;
 	}

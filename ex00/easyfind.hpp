@@ -1,14 +1,12 @@
-
+#include <algorithm>
 #include <iostream>
+
 template <typename T>
-int	easyfind(T container, int toFind)
+typename T::iterator easyfind(T& container, int toFind)
 {
-	typename T::iterator it = container.begin();
-	while (it != container.end())
-	{
-		if (*it == toFind)
-			return (*it);
-		it++;
-	}
-	throw (std::logic_error("Element not in the container"));
+	typename T::iterator it = std::find(container.begin(), container.end(), toFind);
+	if (it == container.end())
+		throw (std::logic_error("Element not in the container"));
+	else
+		return (it);
 }
