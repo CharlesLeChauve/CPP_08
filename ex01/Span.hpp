@@ -24,10 +24,8 @@ public:
 	template <typename T>
 	void addNumberIt(typename T::iterator begin, typename T::iterator end)
 	{
-		for (typename T::iterator it = begin; begin != end; ++it)
-		{
-			addNumber(*begin);
-			++begin;
-		}
+		if ((end - begin) + _numbers.size() > _maxSize)
+			throw (std::logic_error("Too much elements for the container"));
+		_numbers.insert(_numbers.end(), begin, end);
 	}
 };
